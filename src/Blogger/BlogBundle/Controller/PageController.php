@@ -40,7 +40,7 @@ class PageController extends Controller
                     ->setFrom('enquiries@myblog.com')
                     ->setTo($this->container->getParameter('blogger_blog.emails.contact_email'))
                     ->setBody($this->renderView('BloggerBlogBundle:Page:contactEmail.txt.twig', array('enquiry' => $enquiry)));
-                $this->get('mailer')->send($message);
+                //$this->get('mailer')->send($message);
         
                 $this->get('session')->setFlash('blogger-notice', 'Your contact enquiry was successfully sent. Thank you!');
         
